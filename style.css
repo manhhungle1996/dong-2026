@@ -1,0 +1,367 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'UTM BryantLG';
+    src: url('Font/UTM BryantLG.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'UVF Amplify';
+    src: url('Font/UVF Amplify.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('Font/icielBrandonText-Bold.ttf') format('truetype');
+}
+
+:root {
+    --primary-blue: #00ADEF;
+    --light-blue: #E9FDFF;
+    --grey-bg: #E1E1E1;
+    --text-color: #000000;
+    --font-main: 'UTM BryantLG', sans-serif;
+    --font-heading: 'UVF Amplify', cursive;
+    --font-bold: 'Brandon Text', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url('Web-Nen.jpg');
+    background-size: 100% 100%;
+    /* Stretches to fill the entire height of the page */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #f0faff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin-bottom: 15%;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('Mobile-Nen.jpg');
+        background-size: 100% 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('Mobile-Nen.jpg');
+        background-size: 100% auto;
+    }
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-blue);
+    font-weight: normal;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 4.5rem;
+    margin: 40px 0 20px;
+    line-height: 1.1;
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+strong {
+    font-family: var(--font-bold);
+    font-weight: normal;
+}
+
+/* INTRO */
+.intro-section {
+    background-color: var(--light-blue);
+    padding: 60px;
+    border-radius: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-text p {
+    margin-bottom: 15px;
+}
+
+.intro-images-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.intro-images-grid img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* JOURNEY */
+.journey-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.journey-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.journey-row .text {
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+.journey-row .image {
+    width: 300px;
+}
+
+.journey-row img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.journey-phases-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.journey-phases-list li {
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+    line-height: 1.3;
+}
+
+.journey-phases-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    background: url('icon/Anh-5-4.png') no-repeat center;
+    background-size: contain;
+}
+
+/* PILLARS & VALUES */
+.columns-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card {
+    text-align: center;
+    padding: 40px 30px;
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 30px;
+    background: white;
+}
+
+.card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.card p {
+    font-size: 1.2rem;
+}
+
+/* TABS */
+.tabs-header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 100px 0 60px;
+}
+
+.tab-btn {
+    padding: 12px 40px;
+    border-radius: 40px;
+    border: none;
+    background: #D9D9D9;
+    color: white;
+    font-family: var(--font-bold);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    background: var(--primary-blue);
+}
+
+.tab-content {
+    display: none;
+    background: var(--light-blue);
+    padding: 60px;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+
+.tab-content h3 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-details {
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.tab-details strong {
+    color: var(--primary-blue);
+}
+
+/* BANK INFO */
+.bank-section {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.bank-card {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px;
+    background: var(--light-blue);
+    border-radius: 40px;
+}
+
+.qr-image {
+    width: 250px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+
+/* HEADER */
+.header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 60vh;
+    }
+
+    .journey-row,
+    .journey-row.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .journey-row .image {
+        width: 100%;
+    }
+
+    .columns-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-images-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-section {
+        padding: 40px 20px;
+    }
+}
+
+/* TU DONG */
+.tu-dong-section {
+    border: 2px dashed var(--primary-blue);
+    border-radius: 40px;
+    padding: 60px;
+    margin: 80px 0;
+    text-align: center;
+}
+
+.tu-dong-section h2 {
+    margin-top: 0;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.footer-hill {
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+}
+
+.footer img.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
