@@ -47,7 +47,7 @@ body {
 
 @media (max-width: 768px) {
     body {
-        background-image: url('Mobile-Nen.jpg');
+        background-image: url('Mobile-Nen 2.jpg');
         background-size: 100% 100%;
     }
 }
@@ -56,6 +56,8 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from floating elements */
 }
 
 /* Typography */
@@ -89,6 +91,16 @@ strong {
 }
 
 /* INTRO */
+.intro-section,
+.journey-section,
+.foundation-section,
+.tabs-section,
+.bank-section,
+.tu-dong-section,
+.footer {
+    overflow: hidden;
+}
+
 .intro-section {
     background-color: var(--light-blue);
     padding: 60px;
@@ -205,7 +217,7 @@ strong {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 100px 0 60px;
+    margin: 5% 0;
 }
 
 .tab-btn {
@@ -254,7 +266,6 @@ strong {
 /* BANK INFO */
 .bank-section {
     text-align: center;
-    margin-top: 100px;
 }
 
 .bank-card {
@@ -295,11 +306,11 @@ strong {
     }
 
     .header {
-        height: 50vh;
+        height: 60vh;
     }
 
     .header-image {
-        width: 100%;
+        width: 80%;
     }
 
     .section-title {
@@ -317,7 +328,37 @@ strong {
     }
 
     .columns-3 {
-        grid-template-columns: 1fr;
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding-bottom: 20px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-snap-type: x mandatory;
+        margin: 20px -20px;
+        padding: 0 20px;
+    }
+
+    .columns-3::-webkit-scrollbar {
+        display: none;
+    }
+
+    .columns-3 .card {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+        margin-bottom: 0;
+    }
+
+    .intro-images-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding-bottom: 15px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-snap-type: x mandatory;
+        margin: 20px -20px;
+        padding: 0 20px;
     }
 
     .intro-images-grid {
@@ -343,12 +384,48 @@ strong {
         border-radius: 15px;
     }
 
+    .main-container {
+        padding: 0 5%;
+    }
+
+    .tabs-contents-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding-bottom: 20px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-snap-type: x mandatory;
+        margin: 20px -5%;
+        padding: 0 5%;
+    }
+
+    .tabs-contents-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tabs-contents-container .tab-content {
+        display: block !important;
+        flex: 0 0 90%;
+        scroll-snap-align: center;
+        margin-top: 0;
+        padding: 30px 5%;
+    }
+
+    .tabs-header {
+        display: none;
+    }
+
     .intro-section {
-        padding: 30px 20px;
+        padding: 30px 5%;
     }
 
     .tab-content {
-        padding: 30px 20px;
+        padding: 30px 5%;
+    }
+
+    .card {
+        padding: 30px 5%;
     }
 }
 
@@ -356,7 +433,6 @@ strong {
 .tu-dong-section {
     border: 2px dashed var(--primary-blue);
     border-radius: 40px;
-    padding: 60px;
     margin: 80px 0;
     text-align: center;
 }
