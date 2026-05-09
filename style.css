@@ -48,7 +48,7 @@ body {
 @media (max-width: 768px) {
     body {
         background-image: none;
-        background-color: #f0faff; /* Keep the fallback sky blue color */
+        background-color: #ffffff;
     }
 }
 
