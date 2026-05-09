@@ -47,8 +47,8 @@ body {
 
 @media (max-width: 768px) {
     body {
-        background-image: url('Mobile-Nen 2.jpg');
-        background-size: 100% 100%;
+        background-image: none;
+        background-color: #f0faff; /* Keep the fallback sky blue color */
     }
 }
 
@@ -286,7 +286,6 @@ strong {
 
 /* HEADER */
 .header {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -295,8 +294,7 @@ strong {
 }
 
 .header-image {
-    width: 80%;
-    height: 100%;
+    width: 60%;
     object-fit: cover;
 }
 
@@ -305,9 +303,7 @@ strong {
         font-size: 11px;
     }
 
-    .header {
-        height: 60vh;
-    }
+    .header {}
 
     .header-image {
         width: 80%;
