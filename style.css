@@ -70,6 +70,10 @@ h3 {
     text-align: center;
 }
 
+.blue {
+    color: var(--primary-blue);
+}
+
 .section-title {
     font-size: 4.5rem;
     margin: 40px 0 20px;
