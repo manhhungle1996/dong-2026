@@ -50,6 +50,15 @@ body {
         background-image: none;
         background-color: #ffffff;
     }
+
+    .header-image {
+        display: none;
+    }
+
+    .header-image-mobile {
+        display: block !important;
+        width: 100%;
+    }
 }
 
 .main-container {
@@ -58,6 +67,16 @@ body {
     padding: 0 20px;
     overflow-x: hidden;
     /* Prevent horizontal scroll from floating elements */
+}
+
+.header-image {
+    width: 60%;
+    object-fit: cover;
+}
+
+.header-image-mobile {
+    display: none;
+    width: 100%;
 }
 
 /* Typography */
